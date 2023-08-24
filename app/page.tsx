@@ -14,7 +14,7 @@ export default function Home() {
     <>
       <TransitionEffect />
       <main className="flex items-center text-dark w-full h-auto dark:text-light ">
-        <ClientLayout className="  p-0 w-full flex flex-col justify-center items-center ">
+        <ClientLayout className="  p-0 lg:pt-0 w-full flex flex-col justify-center items-center ">
           <div className="w-80 sm:w-96  md:w-screen flex flex-col  lg:justify-between   lg:flex-row lg:items-center ">
             <div className=" w-full lg:w-1/2 lg:self-center items-center  justify-center  relative lg:h-[500px] h-[400px]">
               <Image

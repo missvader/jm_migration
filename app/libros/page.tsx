@@ -62,7 +62,7 @@ const Libros: FC = () => {
     <>
       <TransitionEffect />
       <main className="w-full  flex flex-col items-center justify-center">
-        <ClientLayout className="pt-16 pb-16">
+        <ClientLayout className="pt-16 pb-16 lg:pt-8">
           <AnimatedText
             text={"Pasen, lean y disfruten..."}
             className="!text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl text-primary mb-16 "

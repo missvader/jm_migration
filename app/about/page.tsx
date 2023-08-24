@@ -16,7 +16,7 @@ const About = () => {
     <>
       <TransitionEffect />
       <main className="flex items-center flex-col justify-center w-full ">
-        <ClientLayout className="pt-16  ">
+        <ClientLayout className="pt-16 lg:pt-8 ">
           <AnimatedText
             text={"Un poco sobre mí"}
             className="!text-2xl md:!text-3xl lg:!text-4xl text-primary"
@@ -60,7 +60,7 @@ const About = () => {
               </p>
               <div className="mt-12 ">
                 <Link
-                  href="mailto:abcd@gmail.com"
+                  href="mailto:julianmomu68@gmail.com"
                   target={"_blank"}
                   className=" text-lg font-medium capitalize text-dark underline dark:text-light/75"
                 >

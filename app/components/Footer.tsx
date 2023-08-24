@@ -8,7 +8,7 @@ const Footer = () => {
       className=" border-t-2 border-solid border-dark w-full font-medium text-lg
     dark:text-light dark:border-light"
     >
-      <ClientLayout className="py-8 flex flex-col items-center  px-0">
+      <ClientLayout className="py-8 flex flex-col items-center  px-0 lg:p-8">
         <span className="pb-4">
           {new Date().getFullYear()} &copy; All Rights Reserved by Julián Moya
         </span>
