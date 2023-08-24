@@ -45,9 +45,11 @@ const CustomMobileLink: FC<CustomMobileLinkProps> = ({
     toggle();
     router.push(href);
   };
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
   return (
     <button
-      ref={href}
+      ref={buttonRef}
       className={`${className} relative group text-light dark:text-dark my-2`}
       onClick={handleClick}
     >
@@ -161,7 +163,7 @@ const Navbar: FC = () => {
               toggle={handleClick}
             />
             <CustomMobileLink
-              href="/books "
+              href="/libros "
               title="Libros"
               className=""
               toggle={handleClick}
@@ -173,7 +175,7 @@ const Navbar: FC = () => {
               toggle={handleClick}
             />
             <CustomMobileLink
-              href="/people"
+              href="/braulivers"
               title="Braulivers"
               className=""
               toggle={handleClick}
