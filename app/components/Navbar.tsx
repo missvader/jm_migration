@@ -100,9 +100,9 @@ const Navbar: FC = () => {
       <div className=" hidden lg:w-full lg:flex lg:justify-between lg:items-center ">
         <nav>
           <CustomLink href="/" title="Inicio" className="mr-4" />
-          <CustomLink href="/books " title="Libros" className="mx-4" />
+          <CustomLink href="/libros " title="Libros" className="mx-4" />
           <CustomLink href="/about" title="Sobre mi" className="mx-4" />
-          <CustomLink href="/people" title="Braulivers" className="mr-4" />
+          <CustomLink href="/braulivers" title="Braulivers" className="mr-4" />
           <CustomLink href="/blog" title="Blog" className="mx-4" />
         </nav>
         <nav className="flex items-center justify-center flex-wrap ">

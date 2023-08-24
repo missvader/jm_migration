@@ -6,6 +6,7 @@ import { Montserrat } from "next/font/google";
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
@@ -31,10 +32,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full h-screen`}
+        className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full h-screen `}
       >
         <Navbar />
         <AnimatePresence mode="wait">{children}</AnimatePresence>
+        <Footer />
       </body>
     </html>
   );
