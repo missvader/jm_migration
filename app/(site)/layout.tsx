@@ -1,6 +1,6 @@
 "use client";
 
-import "./globals.css";
+import "../../app/globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import { useEffect } from "react";

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import TransitionEffect from "./components/TransitionEffect";
 import ClientLayout from "./components/ClientLayout";
 import Image from "next/image";
-import home from "../public/images/home/typewritter-PhotoRoom.png-PhotoRoom.png";
+import home from "../../public/images/home/typewritter-PhotoRoom.png-PhotoRoom.png";
 import AnimatedText from "./components/AnimatedText";
 import Link from "next/link";
 export const metadata: Metadata = {
