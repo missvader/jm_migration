@@ -17,3 +17,10 @@ body,
     /* prevents overflow on the x-axis */
     overflow-x: hidden;
 }
+@media (max-width: 640px) {
+  .sun-icon,
+  .moon-icon {
+    width: 16px; /* Cambia el tamaño según tus necesidades */
+    height: 16px;
+  }
+}

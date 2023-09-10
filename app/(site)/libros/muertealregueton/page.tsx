@@ -49,16 +49,22 @@ const Muertealregueton: FC = () => {
                   te dejará indiferente.
                 </p>
                 <div className="grid place-content-center mt-10 ">
-                  <div className="flex  space-x-8">
+                  <div className=" flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:space-x-8">
                     <Link
                       href="https://amzn.eu/d/cQOEG72"
                       className="flex items-center bg-amber-400 text-dark  px-6 rounded-lg text-lg font-mono   border-2 border-solid border-transparent hover:border-dark
-                hover:dark:border-light hover:scale-125 transform transition duration-500
+                hover:dark:border-light hover:scale-125 transform transition duration-500 h-10
                 "
                       target={"_blank"}
                     >
-                      <FaShoppingCart className="mr-2" />
-                      <Image alt="Amazon" src={Amazon} width={80} height={10} />
+                      <FaShoppingCart className="mr-2" size={20} />
+                      <Image
+                        alt="Amazon"
+                        src={Amazon}
+                        height={10}
+                        width={100}
+                        className=" mx-auto"
+                      />
                     </Link>
                     <Link
                       href="https://www.casadellibro.com/libro-muerte-al-regueton/9788411554008/13313822"
