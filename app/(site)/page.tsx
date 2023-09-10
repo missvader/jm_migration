@@ -17,8 +17,8 @@ export default function Home() {
           <div className="w-80 sm:w-96  md:w-screen flex flex-col    lg:flex-row  ">
             <motion.div
               initial="hide"
-              whileInView={"show"}
-              exit={"hide"}
+              animate="show"
+              exit="hide"
               variants={introHeaderVariants}
               className=" dark:text-light/75  mt-12 w-full  "
             >

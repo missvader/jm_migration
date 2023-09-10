@@ -4,7 +4,7 @@ import { Variants } from "framer-motion";
 export const introHeaderVariants: Variants = {
   hide: {
     opacity: 0,
-    x: -500,
+    x: -50,
   },
   show: {
     opacity: 1,
