@@ -20,7 +20,7 @@ body,
 @media (max-width: 640px) {
   .sun-icon,
   .moon-icon {
-    width: 16px; /* Cambia el tamaño según tus necesidades */
-    height: 16px;
+    width: 1.5rem; /* Cambia el tamaño según tus necesidades */
+    height: 1.5rem;
   }
 }
