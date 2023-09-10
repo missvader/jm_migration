@@ -12,7 +12,8 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Julian Moya",
-  description: "Julian Moya website",
+  description:
+    "Julian Moya website. Web del escritor Julian Moya, autor de Muerte al Regueton.",
   icons: {
     icon: "/logo.png",
   },

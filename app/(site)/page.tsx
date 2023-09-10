@@ -1,5 +1,4 @@
 "use client";
-import type { Metadata } from "next";
 import TransitionEffect from "./components/TransitionEffect";
 import ClientLayout from "./components/ClientLayout";
 import Image from "next/image";
@@ -8,10 +7,7 @@ import AnimatedText from "./components/AnimatedText";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { introHeaderVariants } from "./components/FramerMotion";
-export const metadata: Metadata = {
-  title: "Julian Moya",
-  description: "Julian Moya website HomePage",
-};
+
 export default function Home() {
   return (
     <>
