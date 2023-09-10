@@ -1,10 +1,8 @@
-import React from "react";
 import ClientLayout from "../components/ClientLayout";
 import AnimatedText from "../components/AnimatedText";
 import TransitionEffect from "../components/TransitionEffect";
 import Posts from "../components/Posts";
-
-export default async function Blog() {
+export default function Blog() {
   return (
     <>
       <TransitionEffect />

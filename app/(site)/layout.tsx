@@ -1,19 +1,21 @@
-"use client";
-
 import "../../app/globals.css";
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
-import { useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import ThemeEffect from "./components/ThemeEffect";
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
 });
+
 export const metadata: Metadata = {
   title: "Julian Moya",
   description: "Julian Moya website",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -21,21 +23,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  useEffect(() => {
-    const theme =
-      localStorage.theme ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light");
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }, []);
   return (
     <html lang="en">
       <body
         className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full h-screen `}
       >
+        {/* Incluye el componente de efecto secundario aquí */}
+        <ThemeEffect />
+
         <Navbar />
-        <AnimatePresence mode="wait">{children}</AnimatePresence>
+        {children}
         <Footer />
       </body>
     </html>

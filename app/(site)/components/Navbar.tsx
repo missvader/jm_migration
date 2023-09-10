@@ -1,9 +1,9 @@
+"use client";
 import React, { useState, FC, useRef } from "react";
 import Link from "next/link";
 import { FacebookIcon, InstagramIcon, MoonIcon, SunIcon } from "./Icons";
 import Logo from "./Logo";
 import { motion } from "framer-motion";
-import { usePathname, useRouter } from "next/navigation";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 type CustomLinkProps = {
@@ -15,17 +15,17 @@ type CustomMobileLinkProps = {
   href: string;
   title: string;
   className?: string;
-  toggle: () => void;
+  onClick: () => void; // Agrega la prop onClick de tipo función sin argumentos
+  isOpen: boolean; // Agrega la prop isOpen de tipo boolean
 };
 const CustomLink: FC<CustomLinkProps> = ({ href, title, className = "" }) => {
-  const pathname = usePathname();
   return (
-    <Link href={href} className={`${className} relative group`}>
+    <Link href={href} className={`${className} relative group`} scroll={false}>
       {title}
       <span
         className={`h-[1px] inline-block dark:bg-light bg-dark absolute left-0 -bottom-0.5
       group-hover:w-full duration-300 transition-[width] ease
-      ${pathname === href ? "w-full" : "w-0"}
+      ${href ? "w-full" : "w-0"}
       `}
       >
         &nbsp;
@@ -37,32 +37,26 @@ const CustomMobileLink: FC<CustomMobileLinkProps> = ({
   href,
   title,
   className = "",
-  toggle,
+  onClick,
+  isOpen,
 }) => {
-  const router = useRouter();
-  const pathname = usePathname();
-  const handleClick = () => {
-    toggle();
-    router.push(href);
-  };
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
   return (
-    <button
-      ref={buttonRef}
+    <Link
+      href={href}
       className={`${className} relative group text-light dark:text-dark my-2`}
-      onClick={handleClick}
+      scroll={false}
+      onClick={onClick}
     >
       {title}
       <span
         className={`h-[1px] inline-block dark:bg-dark bg-light absolute left-0 -bottom-0.5
       group-hover:w-full duration-300 transition-[width] ease
-      ${pathname === href ? "w-full" : "w-0"}
+      ${href ? "w-full" : "w-0"}
       `}
       >
         &nbsp;
       </span>
-    </button>
+    </Link>
   );
 };
 const Navbar: FC = () => {
@@ -104,7 +98,7 @@ const Navbar: FC = () => {
           <CustomLink href="/" title="Inicio" className="mr-4" />
           <CustomLink href="/libros " title="Libros" className="mx-4" />
           <CustomLink href="/about" title="Sobre mi" className="mx-4" />
-          <CustomLink href="/braulivers" title="Braulivers" className="mr-4" />
+          <CustomLink href="/braulivers" title="Braulivers" className="mx-4" />
           <CustomLink href="/blog" title="Blog" className="mx-4" />
         </nav>
         <nav className="flex items-center justify-center flex-wrap ">
@@ -134,18 +128,24 @@ const Navbar: FC = () => {
           >
             <InstagramIcon className={undefined} />
           </motion.a>
-          <button
+          <motion.button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
             className={`ml-3 flex items-center justify-center rounded-full p-1
         ${mode === "light" ? "bg-dark text-light" : "bg-light text-dark"}
         `}
+            whileHover={{
+              y: -4,
+            }}
+            whileTap={{
+              scale: 0.9,
+            }}
           >
             {mode === "dark" ? (
               <SunIcon className={"fill-dark"} />
             ) : (
               <MoonIcon className={"fill-dark"} />
             )}
-          </button>
+          </motion.button>
         </nav>
       </div>
       {isOpen ? (
@@ -160,31 +160,36 @@ const Navbar: FC = () => {
               href="/"
               title="Inicio"
               className=""
-              toggle={handleClick}
+              onClick={handleClick}
+              isOpen={isOpen}
             />
             <CustomMobileLink
               href="/libros "
               title="Libros"
               className=""
-              toggle={handleClick}
+              onClick={handleClick}
+              isOpen={isOpen}
             />
             <CustomMobileLink
               href="/about"
               title="Sobre mi"
               className=""
-              toggle={handleClick}
+              onClick={handleClick}
+              isOpen={isOpen}
             />
             <CustomMobileLink
               href="/braulivers"
               title="Braulivers"
               className=""
-              toggle={handleClick}
+              onClick={handleClick}
+              isOpen={isOpen}
             />
             <CustomMobileLink
               href="/blog"
               title="Blog"
               className=""
-              toggle={handleClick}
+              onClick={handleClick}
+              isOpen={isOpen}
             />
           </nav>
           <nav className="flex items-center justify-center flex-wrap pt-10">

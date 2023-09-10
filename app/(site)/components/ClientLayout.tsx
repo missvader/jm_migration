@@ -1,5 +1,4 @@
 import React, { FC, ReactNode } from "react";
-
 const ClientLayout: FC<{
   children: ReactNode;
   className?: string;

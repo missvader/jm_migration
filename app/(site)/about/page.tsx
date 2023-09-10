@@ -1,22 +1,18 @@
 import React from "react";
 import AnimatedText from "../components/AnimatedText";
 import ClientLayout from "../components/ClientLayout";
-import perfilJulian from "../../../public/images/profile/perfilJulian.jpg";
+import autor from "../../../public/images/profile/autor.jpg";
 import Image from "next/image";
 import Link from "next/link";
 import TransitionEffect from "../components/TransitionEffect";
-import { Metadata } from "next";
+import { FaEnvelope } from "react-icons/fa";
 
-export const metadata: Metadata = {
-  title: "Julian Moya | Sobre mi",
-  description: "About page of Julian Moya website",
-};
 const About = () => {
   return (
     <>
       <TransitionEffect />
       <main className="flex items-center flex-col justify-center w-full ">
-        <ClientLayout className="pt-16 lg:pt-8 ">
+        <ClientLayout className="pt-16 lg:pt-8 px-8 pb-8">
           <AnimatedText
             text={"Un poco sobre mí"}
             className="!text-2xl md:!text-3xl lg:!text-4xl text-primary"
@@ -29,7 +25,7 @@ const About = () => {
             <div className="lg:order-last lg:col-span-3 xl:col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 mt-4 dark:bg-dark dark:border-light ">
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[1.7rem] bg-dark dark:bg-light " />
               <Image
-                src={perfilJulian}
+                src={autor}
                 alt="Julian Moya "
                 className="w-full h-auto rounded-2xl "
                 priority
@@ -38,7 +34,7 @@ const About = () => {
                 33vw"
               />
             </div>
-            <div className="lg:col-span-3 xl:col-span-3 flex flex-col items-start text-justify lg:justify-start dark:text-light/75  mt-12 lg:mt-0">
+            <div className="lg:col-span-3 lg:mt-10 xl:col-span-3 flex flex-col items-start text-justify lg:justify-start dark:text-light/75  mt-12 lg:mt-0">
               <p className="font-medium my-4">
                 Nacido en 1968 en Terrassa (Barcelona). pero llevo toda mi vida
                 en Mollet del Vallés . Me defino como una persona de izquierdas,
@@ -58,15 +54,18 @@ const About = () => {
                 Mis libros son historias de ficción, una mezcla de novela negra
                 y humor con muchas dosis de crítica social.{" "}
               </p>
-              <div className="mt-12 ">
+              <button className="flex items-center self-center mt-10 ">
                 <Link
                   href="mailto:julianmomu68@gmail.com"
                   target={"_blank"}
-                  className=" text-lg font-medium capitalize text-dark underline dark:text-light/75"
+                  className=" flex justify-center items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark
+                  dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light
+                  hover:dark:border-light"
                 >
-                  Escríbeme
+                  <span>CONTACTA CONMIGO</span>
+                  <FaEnvelope className="self-center ml-4" />
                 </Link>
-              </div>
+              </button>
             </div>
           </div>
         </ClientLayout>

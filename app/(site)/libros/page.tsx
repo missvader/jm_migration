@@ -21,8 +21,8 @@ type BookCardProps = {
 };
 const BookCard: FC<BookCardProps> = ({ title, img, width, height, link }) => {
   return (
-    <article className="w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative rounded-br-2xl dark:bg-dark dark:border-light">
-      <div className="absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[1.7rem] bg-dark rounded-br-3xl dark:bg-light" />
+    <article className=" w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative rounded-br-2xl dark:bg-dark dark:border-light ">
+      <div className=" absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[1.7rem] bg-dark rounded-br-3xl dark:bg-light" />
       <Link
         href={link}
         className="w-full cursor-pointer overflow-hidden rounded-lg"
@@ -62,7 +62,7 @@ const Libros: FC = () => {
     <>
       <TransitionEffect />
       <main className="w-full  flex flex-col items-center justify-center">
-        <ClientLayout className="pt-16 pb-16 lg:pt-8">
+        <ClientLayout className="pt-16 px-8 pb-16 lg:pt-8">
           <AnimatedText
             text={"Pasen, lean y disfruten..."}
             className="!text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl text-primary mb-16 "
@@ -72,7 +72,7 @@ const Libros: FC = () => {
               <BookCard
                 title={"Muerte al reguetón "}
                 img={book1Src}
-                link={"/muertealregueton"}
+                link={"/libros/muertealregueton"}
                 width={0}
                 height={0}
               />
@@ -81,7 +81,7 @@ const Libros: FC = () => {
               <BookCard
                 title={"Muerte al reguetón 2"}
                 img={book2Src}
-                link={"/muertealregueton2"}
+                link={"libros/muertealregueton2"}
                 width={0}
                 height={0}
               />

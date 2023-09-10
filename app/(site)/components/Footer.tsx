@@ -5,12 +5,13 @@ import ClientLayout from "./ClientLayout";
 const Footer = () => {
   return (
     <footer
-      className=" border-t-2 border-solid border-dark w-full font-medium text-lg
+      className=" border-t-2 border-solid border-dark w-full font-medium md:text-lg 
     dark:text-light dark:border-light"
     >
-      <ClientLayout className="py-8 flex flex-col items-center  px-0 lg:p-8">
+      <ClientLayout className="py-8 flex flex-col items-center  px-4 lg:p-8">
         <span className="pb-4">
-          {new Date().getFullYear()} &copy; All Rights Reserved by Julián Moya
+          {new Date().getFullYear()} &copy; All Rights Reserved by&nbsp;
+          <Link href="/admin">Julián Moya</Link>
         </span>
         <span>
           Build with ❤️ by&nbsp;
