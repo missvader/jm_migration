@@ -7,3 +7,13 @@
   max-width: 100%;
   height: auto;
 }
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* prevents overflow on the x-axis */
+    overflow-x: hidden;
+}
