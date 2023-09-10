@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full h-screen `}
+        className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full h-[100vh] `}
       >
         {/* Incluye el componente de efecto secundario aquí */}
         <ThemeEffect />
