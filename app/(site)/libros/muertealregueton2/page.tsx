@@ -53,7 +53,7 @@ const Muertealregueton2: FC = () => {
                   hover:dark:border-light hover:scale-125 transform transition duration-500 text-sm font-semibold
                   "
                   >
-                    ESCRÍBEME PARA COMPRARLO
+                    LO QUIERO
                     <FaEnvelope className="self-center ml-4" />
                   </Link>
                 </div>
