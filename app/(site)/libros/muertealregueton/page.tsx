@@ -35,18 +35,29 @@ const Muertealregueton: FC = () => {
                 variants={introHeaderVariants}
                 className="cols-3 dark:text-light/75 m-10 mt-12  text-justify"
               >
-                <p className="font-medium my-10 lg:my-10 mb-10">
-                  Cuando la sociedad está enferma, cuando no hay valores que
-                  defender y cuando hasta la música ha dejado de acompañarnos en
-                  este duro viaje que es la vida, encontramos personajes que
-                  intentan restablecer el equilibrio a su manera. Quizás no sea
-                  la mejor, pero Braulio, nuestro protagonista, imparte
-                  justicia. En su camino le acompañarán algunos amigos
-                  peculiares, muy conocidos por el autor de esta novela. Si
-                  odias el reguetón y aún te emocionas con algunas canciones que
-                  marcaron nuestra historia, este relato te divertirá,
-                  emocionará y horrorizará a partes iguales, pero seguro que no
-                  te dejará indiferente.
+                <p className="font-medium my-10 lg:my-0 mb-10">
+                  A Braulio no hay cosa que le guste más que matar. La lista de
+                  candidatos a probar su hacha es muy larga, se rige por unos
+                  ideales y gustos musicales, desde violadores, maltratadores,
+                  toreros, portadores de sotana, de coronas, fascistas y
+                  homófobos. No penséis que me olvido de los reguetoneros ellos
+                  son los afortunados de ocupar el primer puesto en la lista. En
+                  su 30 cumpleaños decide salir a celebrar que por fin ha
+                  llegado el día para el que tanto tiempo se ha estado
+                  preparando, lo que Braulio no sabe es que está a punto de
+                  cruzarse con dos personajes muy peculiares, con los que
+                  forjará una extraña relación a la que se podría llamar
+                  amistad. La conversación que mantienen y la camiseta de uno de
+                  ellos son la causa de que se decida a dirigirse a Julián y
+                  Ramón. Se deja llevar por los locales de Mollet que
+                  frecuentan. El nivel de alcohol que alcanza al llegar la noche
+                  le hace desistir de matar a nadie, aunque al despertar no
+                  estará tan seguro de ello ya que no recuerda nada y parece
+                  haber alguien muy quieto junto a él. Mientras Braulio imparte
+                  su justicia y acumula cuerpos desmembrados Julián y Ramón
+                  siguen con su día a día ajenos a lo que se les viene encima.
+                  Tras aquel encuentro casual ya nada volverá a ser lo mismo
+                  para nuestros tres protagonistas.
                 </p>
                 <div className="grid place-content-center mt-10 ">
                   <div className=" flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:space-x-8">

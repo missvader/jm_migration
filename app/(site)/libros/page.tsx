@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import book1 from "../../../public/images/books/book1.jpg";
 import book2 from "../../../public/images/books/book2.jpg";
+import book3 from "../../../public/images/books/ciempies.jpg";
 import { motion } from "framer-motion";
 import TransitionEffect from "../components/TransitionEffect";
 
@@ -15,11 +16,17 @@ const FramerImage = motion(Image);
 type BookCardProps = {
   title: string;
   img: string;
-  link: string;
+  link?: string;
   width: number;
   height: number;
 };
-const BookCard: FC<BookCardProps> = ({ title, img, width, height, link }) => {
+const BookCard: FC<BookCardProps> = ({
+  title,
+  img,
+  width,
+  height,
+  link = "/libros",
+}) => {
   return (
     <article className=" w-full flex flex-col items-center justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative rounded-br-2xl dark:bg-dark dark:border-light ">
       <div className=" absolute top-0 -right-3 -z-10 w-[101%] h-[103%] rounded-[1.7rem] bg-dark rounded-br-3xl dark:bg-light" />
@@ -58,6 +65,7 @@ const BookCard: FC<BookCardProps> = ({ title, img, width, height, link }) => {
 const Libros: FC = () => {
   const book1Src = book1.src;
   const book2Src = book2.src;
+  const book3Src = book3.src;
   return (
     <>
       <TransitionEffect />
@@ -91,6 +99,16 @@ const Libros: FC = () => {
             text={"Próximamente..."}
             className="!text-4xl text-primary mt-16"
           />
+          <div className="mt-10 flex flex-col lg:grid lg:grid-cols-3 gap-8 ">
+            <div className="lg:col-start-2 lg:col-span-1">
+              <BookCard
+                title={"Ciempiés"}
+                img={book3Src}
+                width={0}
+                height={0}
+              />
+            </div>
+          </div>
         </ClientLayout>
       </main>
     </>

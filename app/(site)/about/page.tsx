@@ -1,11 +1,15 @@
+"use client";
 import React from "react";
 import AnimatedText from "../components/AnimatedText";
 import ClientLayout from "../components/ClientLayout";
 import autor from "../../../public/images/profile/autor.jpg";
+import animalets from "../../../public/images/profile/animalets.png";
 import Image from "next/image";
 import Link from "next/link";
 import TransitionEffect from "../components/TransitionEffect";
 import { FaEnvelope } from "react-icons/fa";
+import { motion } from "framer-motion";
+import { introHeaderVariants } from "../components/FramerMotion";
 
 const About = () => {
   return (
@@ -42,8 +46,15 @@ const About = () => {
               </p>
               <p className="font-medium">
                 Amante de los animales, en especial de los gatetes. Es muy
-                probable que si vas a la protectora de La LLagosta, me
-                encuentres allí echando una mano
+                probable que si vas a la&nbsp;
+                <Link
+                  href="https://animaletslallagosta.org/"
+                  target="_blank"
+                  className="hover:underline hover:underline-offset-2"
+                >
+                  protectora de La LLagosta
+                </Link>
+                , me encuentres allí echando una mano
               </p>
               <p className="font-medium my-4">
                 Todas las experiencias que he vivido a lo largo de mi vida, que
@@ -66,8 +77,70 @@ const About = () => {
                   <FaEnvelope className="self-center ml-4" />
                 </Link>
               </button>
+              {/*<div className="mt-10 text-xl font-bold text-secondary">
+                AMIGOS:{" "}
+              </div>
+              <div className=" w-full border border-dashed flex items-center justify-end relative">
+                <div
+                  className="absolute inset-0 bg-cover bg-center"
+                  style={{
+                    backgroundImage: 'url("/images/profile/bg_cats.jpg")',
+                    opacity: "0.3", // Establece la opacidad del fondo aquí
+                  }}
+                ></div>
+                <div className="relative z-10 mr-10 flex flex-col items-center ">
+                  <Link href="https://animaletslallagosta.org/" target="_blank">
+                    <Image
+                      src={animalets}
+                      alt="animalets"
+                      width={100}
+                      height={100}
+                    />
+                  </Link>
+
+                  <div className="text-2xl font-bold ">ANIMALETS</div>
+                </div>
+              </div>*/}
             </div>
           </div>
+          <motion.div
+            initial="hide"
+            whileInView={"show"}
+            exit={"hide"}
+            variants={introHeaderVariants}
+            className="w-full lg:w-5/6 lg:mx-auto"
+          >
+            <div className="mt-10 text-xl font-bold text-secondary">
+              AMIGOS:{" "}
+            </div>
+            <div className="  border  rounded-lg border-dashed flex lg:mx-auto items-center justify-end relative">
+              <div
+                className="absolute inset-0 bg-cover bg-center rounded-lg"
+                style={{
+                  backgroundImage: 'url("/images/profile/bg_cats.jpg")',
+                  opacity: "0.3", // Establece la opacidad del fondo aquí
+                }}
+              ></div>
+              <div className="relative z-10 mr-10 lg:mr-40 flex flex-col items-center ">
+                <Link
+                  href="https://animaletslallagosta.org/"
+                  target="_blank"
+                  className="hover:scale-110 transition-transform"
+                >
+                  <Image
+                    src={animalets}
+                    alt="animalets"
+                    width={100}
+                    height={100}
+                  />
+                </Link>
+
+                <div className="text-2xl font-bold dark:text-light/75 ">
+                  ANIMALETS
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </ClientLayout>
       </main>
     </>

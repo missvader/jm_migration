@@ -33,17 +33,18 @@ const Muertealregueton2: FC = () => {
                 className="cols-3 dark:text-light/75 m-10 mt-12  text-justify"
               >
                 <p className="font-medium my-10 lg:my-10">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit erat eu
-                  elementum hendrerit curabitur lobortis, pharetra porta turpis
-                  per vehicula facilisis risus nullam suspendisse class euismod
-                  neque. Rutrum eleifend himenaeos nam iaculis auctor metus
-                  taciti, nunc in porta dis pellentesque risus tempus, nostra
-                  bibendum morbi dui faucibus tincidunt. Congue est hac curae
-                  nam nec et interdum ante auctor mus, aliquam donec at nunc
-                  volutpat urna consequat hendrerit inceptos eget iaculis, lacus
-                  nisl laoreet vivamus libero vel himenaeos primis id. Senectus
-                  phasellus sem laoreet quisque vivamus, leo torquent praesent
-                  mauris magnis vestibulum, quis rhoncus porttitor class.
+                  Durante un tiempo Braulio ha estado ausente, pero un giro
+                  inesperado en los acontecimientos precipitará su regreso.
+                  Aunque la cosa no terminó bien entre Braulio, Julián y Ramón,
+                  no les quedará más remedio que limar asperezas si quieren
+                  tener alguna posibilidad de seguir con vida. Los enemigos
+                  aumentan en número y poder sin olvidarnos de un grupo de élite
+                  de monjas con muy mala leche y que les encanta morder llamadas
+                  “Las Divinas de la Muerte”. A nuestros tres protagonistas por
+                  el camino se le irán sumando nuevos aliados que serán claves
+                  para lo que les tengo preparado en la tercera entrega. Si
+                  quieres encontrarlos solo tienes que seguir el rastro de
+                  sangre y vísceras que van dejando a su paso.
                 </p>
                 <div className="grid place-content-center mt-10 ">
                   <Link
